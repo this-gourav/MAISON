@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MAISON — Luxury fashion for modern living." />
+  <title>MAISON — Luxury Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <div class="navbar__brand">
+        <a href="#" class="navbar__logo">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 2L2 10v12l14 8 14-8V10L16 2z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+            <path d="M16 2v28M2 10l14 8 14-8" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+          <span class="navbar__name">MAISON</span>
+        </a>
+      </div>
+      <nav class="navbar__links" id="desktopNav">
+        <a href="#hero">Home</a>
+        <a href="#categories">Men</a>
+        <a href="#categories">Women</a>
+        <a href="#new-arrivals">New Arrivals</a>
+        <a href="#lookbook">Collections</a>
+        <a href="#fabrics">Fabrics</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="login-btn" id="loginBtn">Login</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__overlay" id="menuOverlay"></div>
+    <nav class="mobile-menu__nav">
+      <button class="mobile-menu__close" id="menuClose" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="mobile-menu__links">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#categories" class="mobile-link">Men</a>
+        <a href="#categories" class="mobile-link">Women</a>
+        <a href="#new-arrivals" class="mobile-link">New Arrivals</a>
+        <a href="#lookbook" class="mobile-link">Collections</a>
+        <a href="#fabrics" class="mobile-link">Fabrics</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </div>
+      <div class="mobile-menu__footer">
+        <p>+91 98765 43210</p>
+        <p>hello@maisonluxury.com</p>
+      </div>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__slides" id="heroSlides">
+      <div class="hero__slide active" style="background-image:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1800&q=80')"></div>
+      <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1800&q=80')"></div>
+      <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1800&q=80')"></div>
+      <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=80')"></div>
+      <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1800&q=80')"></div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal-fade">New Season — 2025</p>
+      <h1 class="hero__heading reveal-up">Luxury Fashion<br>For Modern Living</h1>
+      <p class="hero__sub reveal-up">Crafted with Premium Fabrics. Designed for Everyday Elegance.</p>
+      <div class="hero__actions reveal-up">
+        <a href="#categories" class="btn btn--light">Shop Collection</a>
+        <a href="#fabrics" class="btn btn--ghost-light">Explore Fabrics</a>
+      </div>
+    </div>
+    <div class="hero__controls">
+      <button class="hero__arrow" id="heroPrev" aria-label="Previous slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="hero__dots" id="heroDots"></div>
+      <button class="hero__arrow" id="heroNext" aria-label="Next slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Premium Linen</span><span class="dot">·</span>
+      <span>Organic Cotton</span><span class="dot">·</span>
+      <span>Italian Silk</span><span class="dot">·</span>
+      <span>Heritage Denim</span><span class="dot">·</span>
+      <span>Luxury Cashmere</span><span class="dot">·</span>
+      <span>Premium Linen</span><span class="dot">·</span>
+      <span>Organic Cotton</span><span class="dot">·</span>
+      <span>Italian Silk</span><span class="dot">·</span>
+      <span>Heritage Denim</span><span class="dot">·</span>
+      <span>Luxury Cashmere</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="section categories" id="categories">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <p class="section-eyebrow">Wardrobe Essentials</p>
+        <h2 class="section-title">Shop by Category</h2>
+      </div>
+      <div class="categories__grid">
+        <div class="cat-card reveal-up" data-delay="0"><div class="cat-card__img-wrap"><img src="https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1?w=600&q=80" alt="Shirts" loading="lazy"/></div><div class="cat-card__body"><h3>Shirts</h3><a href="#" class="cat-link">Shop Now →</a></div></div>
+        <div class="cat-card reveal-up" data-delay="1"><div class="cat-card__img-wrap"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" alt="T-Shirts" loading="lazy"/></div><div class="cat-card__body"><h3>T-Shirts</h3><a href="#" class="cat-link">Shop Now →</a></div></div>
+        <div class="cat-card reveal-up" data-delay="2"><div class="cat-card__img-wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbbuz6BWofKqBv9a0hobEbIMvz7bj2pPRFfCFy1-uy-Q&s=10" alt="Jeans" loading="lazy"/></div><div class="cat-card__body"><h3>Jeans</h3><a href="#" class="cat-link">Shop Now →</a></div></div>
+        <div class="cat-card reveal-up" data-delay="3"><div class="cat-card__img-wrap"><img src="https://images.unsplash.com/photo-1560243563-062bfc001d68?w=600&q=80" alt="Trousers" loading="lazy"/></div><div class="cat-card__body"><h3>Trousers</h3><a href="#" class="cat-link">Shop Now →</a></div></div>
+        <div class="cat-card reveal-up" data-delay="0"><div class="cat-card__img-wrap"><img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=600&q=80" alt="Jackets" loading="lazy"/></div><div class="cat-card__body"><h3>Jackets</h3><a href="#" class="cat-link">Shop Now →</a></div></div>
+        <div class="cat-card reveal-up" data-delay="1"><div class="cat-card__img-wrap"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Co-Ord Sets" loading="lazy"/></div><div class="cat-card__body"><h3>Co-Ord Sets</h3><a href="#" class="cat-link">Shop Now →</a></div></div>
+        <div class="cat-card reveal-up" data-delay="2"><div class="cat-card__img-wrap"><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&q=80" alt="Ethnic Wear" loading="lazy"/></div><div class="cat-card__body"><h3>Ethnic Wear</h3><a href="#" class="cat-link">Shop Now →</a></div></div>
+        <div class="cat-card reveal-up" data-delay="3"><div class="cat-card__img-wrap"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Formal Wear" loading="lazy"/></div><div class="cat-card__body"><h3>Formal Wear</h3><a href="#" class="cat-link">Shop Now →</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FABRICS -->
+  <section class="section fabrics" id="fabrics">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <p class="section-eyebrow">Textile Heritage</p>
+        <h2 class="section-title">Our Fabric Collections</h2>
+        <p class="section-desc">Every thread tells a story. We source only the finest materials from artisan mills across the world.</p>
+      </div>
+      <div class="fabrics__grid">
+        <div class="fabric-card reveal-up" data-delay="0"><div class="fabric-card__img-wrap"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=700&q=80" alt="Linen" loading="lazy"/><div class="fabric-card__label">01</div></div><div class="fabric-card__body"><h3>Linen Collection</h3><p>Breathable European linen, woven for warm-weather refinement and effortless drape.</p></div></div>
+        <div class="fabric-card reveal-up" data-delay="1"><div class="fabric-card__img-wrap"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=700&q=80" alt="Cotton" loading="lazy"/><div class="fabric-card__label">02</div></div><div class="fabric-card__body"><h3>Cotton Collection</h3><p>100% organic Supima cotton — impossibly soft against skin, lasting through seasons.</p></div></div>
+        <div class="fabric-card reveal-up" data-delay="2"><div class="fabric-card__img-wrap"><img src="https://saraclothes.com/cdn/shop/files/0U2TESL25V02_2.jpg?v=1740508681" alt="Silk" loading="lazy"/><div class="fabric-card__label">03</div></div><div class="fabric-card__body"><h3>Silk Collection</h3><p>Charmeuse and crepe de chine from Suzhou — luminous weight for elevated occasions.</p></div></div>
+        <div class="fabric-card reveal-up" data-delay="3"><div class="fabric-card__img-wrap"><img src="https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=700&q=80" alt="Denim" loading="lazy"/><div class="fabric-card__label">04</div></div><div class="fabric-card__body"><h3>Denim Collection</h3><p>Selvedge denim from Japanese mills — structured, ring-spun, and built to age beautifully.</p></div></div>
+        <div class="fabric-card reveal-up" data-delay="0"><div class="fabric-card__img-wrap"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=700&q=80" alt="Blends" loading="lazy"/><div class="fabric-card__label">05</div></div><div class="fabric-card__body"><h3>Premium Blends</h3><p>Proprietary linen-modal and silk-cotton blends — engineered for the modern wardrobe.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST SELLERS -->
+  <section class="section bestsellers" id="bestsellers">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <p class="section-eyebrow">Most Loved</p>
+        <h2 class="section-title">Best Sellers</h2>
+      </div>
+      <div class="products__grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section class="section new-arrivals" id="new-arrivals">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <p class="section-eyebrow">Just In</p>
+        <h2 class="section-title">New Arrivals</h2>
+      </div>
+    </div>
+    <div class="arrivals__scroll-wrap">
+      <div class="arrivals__track" id="arrivalsTrack"></div>
+    </div>
+  </section>
+
+  <!-- LOOKBOOK -->
+  <section class="section lookbook" id="lookbook">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <p class="section-eyebrow">Editorial</p>
+        <h2 class="section-title">The Lookbook</h2>
+      </div>
+    </div>
+    <div class="lookbook__grid">
+      <div class="lookbook-item lookbook-item--large reveal-up" data-delay="0">
+        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=900&q=80" alt="Men's Collection" loading="lazy"/>
+        <div class="lookbook-item__overlay"><p class="lookbook-item__tag">Men's Collection</p><h3>The Modern Gentleman</h3><a href="#" class="btn btn--ghost-light btn--sm">View Collection</a></div>
+      </div>
+      <div class="lookbook-item reveal-up" data-delay="1">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700&q=80" alt="Women's Collection" loading="lazy"/>
+        <div class="lookbook-item__overlay"><p class="lookbook-item__tag">Women's Collection</p><h3>Effortless Grace</h3><a href="#" class="btn btn--ghost-light btn--sm">View Collection</a></div>
+      </div>
+      <div class="lookbook-item reveal-up" data-delay="2">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=700&q=80" alt="Premium Essentials" loading="lazy"/>
+        <div class="lookbook-item__overlay"><p class="lookbook-item__tag">Premium Essentials</p><h3>Wardrobe Staples</h3><a href="#" class="btn btn--ghost-light btn--sm">View Collection</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <p class="section-eyebrow">Client Stories</p>
+        <h2 class="section-title">What They Say</h2>
+      </div>
+      <div class="reviews__carousel-wrap">
+        <div class="reviews__track" id="reviewsTrack"></div>
+        <div class="reviews__controls">
+          <button class="reviews__arrow" id="reviewPrev" aria-label="Previous review">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="reviews__dots" id="reviewDots"></div>
+          <button class="reviews__arrow" id="reviewNext" aria-label="Next review">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section newsletter" id="contact">
+    <div class="container">
+      <div class="newsletter__inner reveal-fade">
+        <p class="section-eyebrow">Stay Connected</p>
+        <h2 class="newsletter__heading">Join The Fashion Circle</h2>
+        <p class="newsletter__desc">Be first to know about new collections, exclusive events, and private sales.</p>
+        <form class="newsletter__form" id="newsletterForm" novalidate>
+          <input type="email" class="newsletter__input" placeholder="Your email address" required />
+          <button type="submit" class="btn btn--dark">Subscribe</button>
+        </form>
+        <p class="newsletter__note">No spam. Unsubscribe any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__wardrobe">
+      <div class="wardrobe-rod"></div>
+      <div class="wardrobe-hooks">
+        <div class="hook-group"><div class="hook"></div><div class="hanger"><div class="hanger__bar"></div><div class="shirt shirt--1"></div></div></div>
+        <div class="hook-group"><div class="hook"></div><div class="hanger"><div class="hanger__bar"></div><div class="shirt shirt--2"></div></div></div>
+        <div class="hook-group"><div class="hook"></div><div class="hanger"><div class="hanger__bar"></div><div class="shirt shirt--3"></div></div></div>
+        <div class="hook-group"><div class="hook"></div><div class="hanger"><div class="hanger__bar"></div><div class="shirt shirt--4"></div></div></div>
+        <div class="hook-group"><div class="hook"></div><div class="hanger"><div class="hanger__bar"></div><div class="shirt shirt--5"></div></div></div>
+        <div class="hook-group"><div class="hook"></div><div class="hanger"><div class="hanger__bar"></div><div class="shirt shirt--6"></div></div></div>
+      </div>
+    </div>
+    <div class="footer__body">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M16 2L2 10v12l14 8 14-8V10L16 2z" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M16 2v28M2 10l14 8 14-8" stroke="currentColor" stroke-width="1.2"/></svg>
+              <span>MAISON</span>
+            </div>
+            <p>Luxury fashion for the thoughtful dresser. Every piece, a quiet statement.</p>
+            <div class="footer__social">
+              <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+            </div>
+          </div>
+          <div class="footer__col"><h4>Company</h4><a href="#">About Us</a><a href="#">Our Story</a><a href="#">Careers</a></div>
+          <div class="footer__col"><h4>Shop</h4><a href="#">Men</a><a href="#">Women</a><a href="#">Accessories</a></div>
+          <div class="footer__col"><h4>Help</h4><a href="#">FAQ</a><a href="#">Shipping</a><a href="#">Returns</a></div>
+          <div class="footer__col"><h4>Contact</h4><a href="tel:+919876543210">+91 98765 43210</a><a href="mailto:hello@maisonluxury.com">hello@maisonluxury.com</a><p class="footer__addr">12 Textile Lane, Mumbai — 400001</p></div>
+        </div>
+        <div class="footer__bottom">
+          <p>© 2025 MAISON. All rights reserved.</p>
+          <div class="footer__legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-drawer__header">
+      <h3>Your Cart <span id="cartHeaderCount"></span></h3>
+      <button class="cart-drawer__close" id="cartClose" aria-label="Close cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-drawer__body" id="cartBody"></div>
+    <div class="cart-drawer__footer" id="cartFooter"></div>
+  </aside>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toastMsg">Added to cart</span>
+  </div>
+
+  <!-- QUICK VIEW MODAL -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="quick-view-modal" id="quickViewModal">
+    <button class="modal-close" id="modalClose" aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="quick-view-modal__inner" id="quickViewContent"></div>
+  </div>
+
+  <!-- AUTH MODAL (Login / Signup) -->
+  <div class="auth-modal" id="authModal">
+    <div class="auth-box">
+      <button class="close-auth" id="closeAuth" aria-label="Close">&times;</button>
+
+      <!-- Tabs -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tabLogin" onclick="showLogin()">Login</button>
+        <button class="auth-tab" id="tabSignup" onclick="showSignup()">Sign Up</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="active" novalidate>
+        <h2>Welcome Back</h2>
+        <p class="auth-subtitle">Sign in to your MAISON account</p>
+
+        <div class="auth-field">
+          <label for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email"/>
+          <span class="field-error" id="loginEmailErr">Please enter a valid email</span>
+        </div>
+        <div class="auth-field">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Your password" autocomplete="current-password"/>
+          <span class="field-error" id="loginPassErr">Password is required</span>
+        </div>
+
+        <button type="submit" class="auth-submit">
+          <span class="btn-text">Login</span>
+          <span class="btn-loader">Signing in…</span>
+        </button>
+        <p class="auth-switch">Don't have an account? <a onclick="showSignup()">Sign Up</a></p>
+      </form>
+
+      <!-- SIGNUP FORM -->
+      <form id="signupForm" novalidate>
+        <h2>Create Account</h2>
+        <p class="auth-subtitle">Join the MAISON family today</p>
+
+        <div class="auth-field">
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" placeholder="Your full name" autocomplete="name"/>
+          <span class="field-error" id="signupNameErr">Full name is required</span>
+        </div>
+        <div class="auth-field">
+          <label for="signupEmail">Email Address</label>
+          <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email"/>
+          <span class="field-error" id="signupEmailErr">Please enter a valid email</span>
+        </div>
+        <div class="auth-field">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="Min. 6 characters" autocomplete="new-password"/>
+          <span class="field-error" id="signupPassErr">Password must be at least 6 characters</span>
+        </div>
+
+        <button type="submit" class="auth-submit">
+          <span class="btn-text">Create Account</span>
+          <span class="btn-loader">Creating account…</span>
+        </button>
+        <p class="auth-switch">Already have an account? <a onclick="showLogin()">Login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- CHECKOUT / DELIVERY MODAL -->
+  <div class="checkout-modal" id="checkoutModal">
+    <div class="checkout-box">
+      <div class="checkout-header">
+        <h2>Delivery Details</h2>
+        <button class="close-checkout" id="closeCheckout" aria-label="Close">&times;</button>
+      </div>
+
+      <div class="checkout-scroll">
+        <div class="checkout-grid">
+          <div class="checkout-field full-width">
+            <label for="deliName">Full Name <span class="required-star">*</span></label>
+            <input type="text" id="deliName" placeholder="As on delivery address" autocomplete="name"/>
+            <span class="field-error" id="deliNameErr">Full name is required</span>
+          </div>
+          <div class="checkout-field">
+            <label for="deliphone">Phone Number <span class="required-star">*</span></label>
+            <input type="tel" id="deliphone" placeholder="10-digit mobile number" maxlength="10" autocomplete="tel"/>
+            <span class="field-error" id="deliPhoneErr">Enter a valid 10-digit number</span>
+          </div>
+          <div class="checkout-field">
+            <label for="deliemail">Email Address <span class="required-star">*</span></label>
+            <input type="email" id="deliemail" placeholder="For order updates" autocomplete="email"/>
+            <span class="field-error" id="deliEmailErr">Please enter a valid email</span>
+          </div>
+          <div class="checkout-field full-width">
+            <label for="deliaddress">Street Address <span class="required-star">*</span></label>
+            <input type="text" id="deliaddress" placeholder="House no., Street, Area" autocomplete="street-address"/>
+            <span class="field-error" id="deliAddrErr">Address is required</span>
+          </div>
+          <div class="checkout-field">
+            <label for="delicity">City <span class="required-star">*</span></label>
+            <input type="text" id="delicity" placeholder="City" autocomplete="address-level2"/>
+            <span class="field-error" id="deliCityErr">City is required</span>
+          </div>
+          <div class="checkout-field">
+            <label for="delistate">State <span class="required-star">*</span></label>
+            <input type="text" id="delistate" placeholder="State" autocomplete="address-level1"/>
+            <span class="field-error" id="deliStateErr">State is required</span>
+          </div>
+          <div class="checkout-field">
+            <label for="delipin">Pincode <span class="required-star">*</span></label>
+            <input type="text" id="delipin" placeholder="6-digit pincode" maxlength="6" autocomplete="postal-code"/>
+            <span class="field-error" id="deliPinErr">Enter a valid 6-digit pincode</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout-footer">
+        <div class="checkout-order-summary">
+          <span>Order Total</span>
+          <span id="checkoutTotal">₹0</span>
+        </div>
+        <button class="checkout-submit" id="placeOrderBtn" onclick="placeOrder()">
+          Place Order
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS POPUP -->
+  <div class="success-popup" id="successPopup">
+    <div class="success-content">
+      <div class="checkmark">✓</div>
+      <h3>Order Placed!</h3>
+      <p>Thank you for shopping with MAISON.<br>Your delivery details have been saved.</p>
+    </div>
+  </div>
+
+  <!-- AUTH TOAST -->
+  <div class="auth-toast" id="authToast">
+    <div class="auth-toast-content">
+      <span id="authToastIcon">✓</span>
+      <p id="authToastText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
