@@ -4,7 +4,7 @@
    CONFIG
    ✅ FIX: was 3000 in original — backend runs on PORT 4000
    ============================================================ */
-const API = 'https://maison-backend-ewap.onrender.com/api/v1';
+const API = 'https://maison-backend-2.onrender.com/api/v1';
 
 /* ============================================================
    USER SESSION  (sessionStorage so it survives refresh)
